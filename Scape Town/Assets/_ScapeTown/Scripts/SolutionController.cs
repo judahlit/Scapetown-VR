@@ -7,7 +7,7 @@ public class SolutionController : MonoBehaviour
     [SerializeField] private List<ColorSwitch> _selectedDoors;
     [SerializeField] private List<ColorSwitch> _unselectedDoors;
 
-    [SerializeField] private List<GameObject> _dissapearingObjects;
+    [SerializeField] private List<MoveDown> _dissapearingObjects;
 
     private void OnEnable() {
         foreach(ColorSwitch curr in _selectedDoors)
@@ -43,11 +43,11 @@ public class SolutionController : MonoBehaviour
     private void SuccessHandler()
     {
         
-        foreach(GameObject curr in _dissapearingObjects)
+        foreach(MoveDown curr in _dissapearingObjects)
         {
-            curr.SetActive(false);
+            curr.enabled = true;
         }
-        
+
         foreach(ColorSwitch curr in _selectedDoors)
         {
             curr.gameObject.SetActive(false);
