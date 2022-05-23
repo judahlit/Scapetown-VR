@@ -6,7 +6,7 @@ public class KeyPadControl : MonoBehaviour
 {
     [SerializeField] int correctCombination;
     public bool accessGranted = false;
-
+    
     // Start is called before the first frame update
     void Start()
     {
