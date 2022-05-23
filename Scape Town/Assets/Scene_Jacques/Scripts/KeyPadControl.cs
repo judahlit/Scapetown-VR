@@ -6,16 +6,16 @@ public class KeyPadControl : MonoBehaviour
 {
     [SerializeField] int correctCombination;
     public bool accessGranted = false;
+
     // Start is called before the first frame update
     void Start()
     {
-        
     }
     // Update is called once per frame
     void Update()
     {
         if(accessGranted == true) {
-            accessGranted = false;
+            //accessGranted = false;
         }
     }
     public bool CheckIfCorrect(int combination) {
