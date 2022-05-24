@@ -15,9 +15,9 @@ public class PhysicsButton : MonoBehaviour
     public GameObject house;
     public GameObject house2;
     public GameObject house3;
-    public GameObject textToShow;
+    
     */
-
+    public GameObject textToShow;
     // The material that the skybox changes to when the player presses the button.
     public Material skyboxMat;
 
@@ -74,9 +74,9 @@ public class PhysicsButton : MonoBehaviour
 
         var cubeRenderer3 = house3.GetComponent<Renderer>();
         cubeRenderer3.material.SetColor("_Color", Color.gray);
-        textToShow.SetActive(true);
+        
         */
-
+        textToShow.SetActive(true);
         RenderSettings.skybox = skyboxMat;
         RenderSettings.fog = true;
         
