@@ -9,11 +9,15 @@ public class PhysicsButton : MonoBehaviour
     [SerializeField] private float threshold = 0.1f;
     [SerializeField] private float deadZone = 0.025f;
 
+    /*
     public GameObject house;
     public GameObject house2;
     public GameObject house3;
+    
 
     public GameObject textToShow;
+
+    */
 
     public Material skyboxMat;
 
@@ -53,6 +57,8 @@ public class PhysicsButton : MonoBehaviour
         _isPressed = true;
         onPressed.Invoke();
         Debug.Log("Button Pressed");
+
+        /*
         var cubeRenderer1 = house.GetComponent<Renderer>();
         cubeRenderer1.material.SetColor("_Color", Color.yellow);
 
@@ -61,10 +67,12 @@ public class PhysicsButton : MonoBehaviour
 
         var cubeRenderer3 = house3.GetComponent<Renderer>();
         cubeRenderer3.material.SetColor("_Color", Color.gray);
+        textToShow.SetActive(true);
+        */
 
         RenderSettings.skybox = skyboxMat;
         RenderSettings.fog = true;
-        textToShow.SetActive(true);
+        
 
     }
 
