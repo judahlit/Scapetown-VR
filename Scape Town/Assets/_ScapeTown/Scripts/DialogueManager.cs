@@ -16,11 +16,15 @@ public class DialogueManager : MonoBehaviour
         sentences = new Queue<string>();
     }
 
-    public void StartDialogue(Dialogue dialogue)
+    public void StartDialogue(Dialogue dialogue, GameObject textName, GameObject textDialogue)
     {
-        /*animator.SetBool("IsOpen", true);
+        //animator.SetBool("IsOpen", true);
+        nameText = textName.GetComponent<Text>();
+        dialogueText = textDialogue.GetComponent<Text>();
         nameText.text = dialogue.name;
-        sentences.Clear();*/
+        Debug.Log(nameText.name);
+        Debug.Log("name shown");
+        sentences.Clear();
 
         foreach (string sentence in dialogue.sentences)
         {
@@ -39,8 +43,8 @@ public class DialogueManager : MonoBehaviour
         }
 
         string sentence = sentences.Dequeue();
-        //StopAllCoroutines();
-        //StartCoroutine(TypeSentence(sentence));
+        StopAllCoroutines();
+        StartCoroutine(TypeSentence(sentence));
         Debug.Log(sentence);
     }
 
