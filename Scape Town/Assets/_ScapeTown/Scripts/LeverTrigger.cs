@@ -21,10 +21,11 @@ public class LeverTrigger : MonoBehaviour
         {
             if (!usedLast)
             {
-                moveObject.transform.position += new Vector3(-1, 0, 0);
+                moveObject.transform.position += direction;
                 Debug.Log("Off");
                 usedLast = true;
                 otherEnd.gameObject.GetComponent<LeverTrigger>().usedLast = false;
+                Debug.Log(otherEnd.gameObject.GetComponent<LeverTrigger>().usedLast+" for "+otherEnd.name);
             }
             
         }
