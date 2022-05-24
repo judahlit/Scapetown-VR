@@ -391,7 +391,7 @@ MonoBehaviour:
   m_EnableTurnLeftRight: 1
   m_EnableTurnAround: 1
   m_LeftHandSnapTurnAction:
-    m_UseReference: 1
+    m_UseReference: 0
     m_Action:
       m_Name: Left Hand Snap Turn
       m_Type: 0
@@ -471,7 +471,7 @@ MonoBehaviour:
   m_MoveSpeed: 1
   m_EnableStrafe: 1
   m_UseGravity: 1
-  m_GravityApplicationMode: 0
+  m_GravityApplicationMode: 1
   m_ForwardSource: {fileID: 0}
   m_LeftHandMoveAction:
     m_UseReference: 1
@@ -486,7 +486,7 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: 6972639530819350904, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   m_RightHandMoveAction:
-    m_UseReference: 1
+    m_UseReference: 0
     m_Action:
       m_Name: Right Hand Move
       m_Type: 0
@@ -510,9 +510,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_System: {fileID: 196464739}
-  m_TurnSpeed: 60
+  m_TurnSpeed: 45
   m_LeftHandTurnAction:
-    m_UseReference: 1
+    m_UseReference: 0
     m_Action:
       m_Name: Left Hand Turn
       m_Type: 0
@@ -891,6 +891,8 @@ GameObject:
   m_Component:
   - component: {fileID: 494485223}
   - component: {fileID: 494485222}
+  - component: {fileID: 494485225}
+  - component: {fileID: 494485224}
   m_Layer: 0
   m_Name: XR Origin
   m_TagString: Untagged
@@ -930,6 +932,39 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &494485224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 494485221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af6bf904e410ee8479f9093d8830d1f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_LocomotionProvider: {fileID: 196464738}
+  m_MinHeight: 1
+  m_MaxHeight: 2
+--- !u!143 &494485225
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 494485221}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 2
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!114 &500598415 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1007929595965581170, guid: 483e8113bee09b547bf512f199a5de91, type: 3}
