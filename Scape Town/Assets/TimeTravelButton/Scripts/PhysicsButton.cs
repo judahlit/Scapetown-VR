@@ -6,36 +6,42 @@ using UnityEngine.Events;
 
 public class PhysicsButton : MonoBehaviour
 {
+    // Serialized floats that store the threshold that has to be met to identify a button press. And the deadzone that ignores accidental input.
     [SerializeField] private float threshold = 0.1f;
     [SerializeField] private float deadZone = 0.025f;
 
+    // Not used in prefab version.
     /*
     public GameObject house;
     public GameObject house2;
     public GameObject house3;
-    
-
     public GameObject textToShow;
-
     */
 
+    // The material that the skybox changes to when the player presses the button.
     public Material skyboxMat;
 
+    // Variables to store whether or not the butten is pressed, what the start position is of the button as a vector and
+    // the configurable joint used to make the button physics work.
     private bool _isPressed;
     private Vector3 _startPos;
     private ConfigurableJoint _joint;
 
+    // Eventsystems.
     public UnityEvent onPressed, onReleased;
-    // Start is called before the first frame update
+
     void Start()
     {
+        // When the script is first loaded get the starting position of the button, and the configurable joint.
         _startPos = transform.localPosition;
         _joint = GetComponent<ConfigurableJoint>();
     }
 
-    // Update is called once per frame
     void Update()
     {
+        // Constantly check whether or not the threshold has been met and if the button hasn't already been pressed.
+        // If the button has not been pressed and the threshold is met, the Pressed method gets executed.
+        // Otherwise the Released method gets executed.
         if (!_isPressed && GetValue() + threshold >= 1)
             Pressed();
         if (_isPressed && GetValue() - threshold <= 0)
@@ -44,6 +50,7 @@ public class PhysicsButton : MonoBehaviour
 
     private float GetValue()
     {
+        // Float used to store the distance traveled of the button.
         var value = Vector3.Distance(_startPos, transform.localPosition) / _joint.linearLimit.limit;
 
         if (Math.Abs(value) < deadZone)
