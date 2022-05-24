@@ -2,14 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OverGrabbable : OVRGrabbable
+public class OverGrabbable : MonoBehaviour
 {
     public Transform handler;
 
-    public override void GrabEnd(Vector3 linearVelocity, Vector3 angularVelocity)
+    public void GrabEnd(Vector3 linearVelocity, Vector3 angularVelocity)
     {
-        base.GrabEnd(Vector3.zero, Vector3.zero);
-
         transform.position = handler.transform.position;
         transform.rotation = handler.transform.rotation;
     }
