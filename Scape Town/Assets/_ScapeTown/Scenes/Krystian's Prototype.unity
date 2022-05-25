@@ -468,7 +468,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_System: {fileID: 196464739}
-  m_MoveSpeed: 20
+  m_MoveSpeed: 4
   m_EnableStrafe: 1
   m_UseGravity: 1
   m_GravityApplicationMode: 1
@@ -4563,47 +4563,59 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5212067319134795072, guid: fe81a980a486efd48acb3de2c39acc25, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.707
+      value: 1.6562068
       objectReference: {fileID: 0}
     - target: {fileID: 5212067319134795072, guid: fe81a980a486efd48acb3de2c39acc25, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.202
+      value: 1.7075855
       objectReference: {fileID: 0}
     - target: {fileID: 5212067319134795072, guid: fe81a980a486efd48acb3de2c39acc25, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10.416
+      value: -10.771569
       objectReference: {fileID: 0}
     - target: {fileID: 5212067319134795072, guid: fe81a980a486efd48acb3de2c39acc25, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.84859484
+      value: 0.042412765
       objectReference: {fileID: 0}
     - target: {fileID: 5212067319134795072, guid: fe81a980a486efd48acb3de2c39acc25, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.52297026
+      value: -0.06717511
       objectReference: {fileID: 0}
     - target: {fileID: 5212067319134795072, guid: fe81a980a486efd48acb3de2c39acc25, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.03417424
+      value: -0.84822303
       objectReference: {fileID: 0}
     - target: {fileID: 5212067319134795072, guid: fe81a980a486efd48acb3de2c39acc25, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.072256714
+      value: -0.52364725
       objectReference: {fileID: 0}
     - target: {fileID: 5212067319134795072, guid: fe81a980a486efd48acb3de2c39acc25, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 63.191
+      value: -63.385
       objectReference: {fileID: 0}
     - target: {fileID: 5212067319134795072, guid: fe81a980a486efd48acb3de2c39acc25, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -2.233
+      value: -179.796
       objectReference: {fileID: 0}
     - target: {fileID: 5212067319134795072, guid: fe81a980a486efd48acb3de2c39acc25, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -11.108
+      value: 8.93
       objectReference: {fileID: 0}
     - target: {fileID: 5212067319134795073, guid: fe81a980a486efd48acb3de2c39acc25, type: 3}
       propertyPath: m_Name
       value: LeverSystem
+      objectReference: {fileID: 0}
+    - target: {fileID: 5212067319366746081, guid: fe81a980a486efd48acb3de2c39acc25, type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: -0.08236134
+      objectReference: {fileID: 0}
+    - target: {fileID: 5212067319366746081, guid: fe81a980a486efd48acb3de2c39acc25, type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: 1.5676178
+      objectReference: {fileID: 0}
+    - target: {fileID: 5212067319366746081, guid: fe81a980a486efd48acb3de2c39acc25, type: 3}
+      propertyPath: m_ConnectedAnchor.z
+      value: -11.357548
       objectReference: {fileID: 0}
     - target: {fileID: 5212067319366746095, guid: fe81a980a486efd48acb3de2c39acc25, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5140,7 +5152,7 @@ GameObject:
   - component: {fileID: 3303611772272407211}
   - component: {fileID: 3303611772272407210}
   - component: {fileID: 3303611772272407209}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Paper Grab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5276,7 +5288,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 116
+  m_Constraints: 36
   m_CollisionDetection: 0
 --- !u!65 &3303611772272407211
 BoxCollider:
@@ -5380,7 +5392,7 @@ GameObject:
   - component: {fileID: 5156899889520208555}
   - component: {fileID: 5156899889520208554}
   - component: {fileID: 5156899889520208553}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Drawer left side
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5855,7 +5867,7 @@ GameObject:
   - component: {fileID: 5156899889869267847}
   - component: {fileID: 5156899889869267846}
   - component: {fileID: 5156899889869267845}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Drawer front
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5950,7 +5962,7 @@ GameObject:
   - component: {fileID: 5156899890019562382}
   - component: {fileID: 5156899890019562381}
   - component: {fileID: 5156899890019562380}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Drawer bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6045,7 +6057,7 @@ GameObject:
   - component: {fileID: 5156899890091840668}
   - component: {fileID: 5156899890091840667}
   - component: {fileID: 7667114404483928268}
-  m_Layer: 8
+  m_Layer: 11
   m_Name: Door handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6130,7 +6142,7 @@ GameObject:
   - component: {fileID: 1268403743041090415}
   - component: {fileID: 1268403743041090416}
   - component: {fileID: 1268403743041090414}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Drawer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6372,7 +6384,7 @@ GameObject:
   - component: {fileID: 5156899890767784016}
   - component: {fileID: 5156899890767784031}
   - component: {fileID: 5156899890767784030}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Drawer back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6459,7 +6471,7 @@ GameObject:
   - component: {fileID: 5156899890903215322}
   - component: {fileID: 5156899890903215321}
   - component: {fileID: 5156899890903215320}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Drawer right side
   m_TagString: Untagged
   m_Icon: {fileID: 0}
