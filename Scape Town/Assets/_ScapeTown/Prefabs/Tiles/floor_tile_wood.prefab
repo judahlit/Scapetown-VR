@@ -13,9 +13,8 @@ GameObject:
   - component: {fileID: 3263077588703261709}
   - component: {fileID: 3263077588703261710}
   - component: {fileID: 3263077588703261711}
-  - component: {fileID: 3263077588703261704}
   m_Layer: 0
-  m_Name: floor_tile
+  m_Name: floor_tile_wood
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -182,18 +181,3 @@ MonoBehaviour:
   m_Teleporting:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &3263077588703261704
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3263077588703261706}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc3ed1947c7e7ef45b1a2af0db5f07b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _selectedDoors: []
-  _unselectedDoors: []
-  _dissapearingObjects: []
