@@ -5,10 +5,9 @@ using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
-    public Text nameText;
-    public Text dialogueText;
-    //public Animator animator;
-
+    private Text nameText;
+    private Text dialogueText;
+	private DialogueTrigger;
     private Queue<string> sentences;
 
     void Start()
@@ -18,7 +17,6 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(Dialogue dialogue, GameObject textName, GameObject textDialogue)
     {
-        //animator.SetBool("IsOpen", true);
         nameText = textName.GetComponent<Text>();
         dialogueText = textDialogue.GetComponent<Text>();
         nameText.text = dialogue.name;
@@ -61,6 +59,6 @@ public class DialogueManager : MonoBehaviour
 
     private void EndDialogue()
     {
-        //animator.SetBool("IsOpen", false);
+        
     }
 }

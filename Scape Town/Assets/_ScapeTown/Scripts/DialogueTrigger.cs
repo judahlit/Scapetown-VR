@@ -46,7 +46,13 @@ public class DialogueTrigger : MonoBehaviour
     {
         SetButtonTalk(false);
         dialoguePanel.SetActive(true);
-        FindObjectOfType<DialogueManager>().StartDialogue(dialogue, textName, textDialogue);
+        FindObjectOfType<DialogueManager>().StartDialogue(dialogue, textName, textDialogue, gameobject);
+    }
+
+    public void ClearDialogue()
+    {
+        SetButtonTalk(true);
+        dialoguePanel.SetActive(false);
     }
 
     private void SetButtonTalk(bool active)
