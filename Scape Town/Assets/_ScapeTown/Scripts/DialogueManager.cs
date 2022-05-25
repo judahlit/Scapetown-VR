@@ -7,7 +7,7 @@ public class DialogueManager : MonoBehaviour
 {
     private Text nameText;
     private Text dialogueText;
-	private DialogueTrigger;
+	private DialogueTrigger dialogueTrigger;
     private Queue<string> sentences;
 
     void Start()
@@ -15,13 +15,13 @@ public class DialogueManager : MonoBehaviour
         sentences = new Queue<string>();
     }
 
-    public void StartDialogue(Dialogue dialogue, GameObject textName, GameObject textDialogue)
+    public void StartDialogue(Dialogue dialogue, GameObject textName, GameObject textDialogue, GameObject triggerObject)
     {
         nameText = textName.GetComponent<Text>();
         dialogueText = textDialogue.GetComponent<Text>();
+        dialogueTrigger = triggerObject.GetComponent<DialogueTrigger>();
+
         nameText.text = dialogue.name;
-        Debug.Log(nameText.name);
-        Debug.Log("name shown");
         sentences.Clear();
 
         foreach (string sentence in dialogue.sentences)
@@ -43,7 +43,6 @@ public class DialogueManager : MonoBehaviour
         string sentence = sentences.Dequeue();
         StopAllCoroutines();
         StartCoroutine(TypeSentence(sentence));
-        Debug.Log(sentence);
     }
 
     IEnumerator TypeSentence (string sentence)
@@ -59,6 +58,6 @@ public class DialogueManager : MonoBehaviour
 
     private void EndDialogue()
     {
-        
+        dialogueTrigger.ClearDialogue();
     }
 }

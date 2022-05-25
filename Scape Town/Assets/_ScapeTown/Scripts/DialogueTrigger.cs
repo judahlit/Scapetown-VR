@@ -12,28 +12,34 @@ public class DialogueTrigger : MonoBehaviour
     public GameObject dialoguePanel;
     public GameObject textName;
     public GameObject textDialogue;
+    [SerializeField] private float talkDistance = 3f;
 
     private float distance;
     private bool buttonTalkIsActive;
+    private bool isTalking;
 
     private void Start()
     {
         SetButtonTalk(false);
         dialoguePanel.SetActive(false);
+        isTalking = false;
     }
 
     private void Update()
     {
         distance = Vector3.Distance(transform.position, player.transform.position);
 
-        if (distance <= 2f && !buttonTalkIsActive)
+        if (!isTalking)
         {
-            SetButtonTalk(true);
-        }
+            if (distance <= talkDistance && !buttonTalkIsActive)
+            {
+                SetButtonTalk(true);
+            }
 
-        if (distance > 2f && buttonTalkIsActive)
-        {
-            SetButtonTalk(false);
+            if (distance > talkDistance && buttonTalkIsActive)
+            {
+                SetButtonTalk(false);
+            }
         }
 
         if (buttonTalk.IsActive())
@@ -46,13 +52,17 @@ public class DialogueTrigger : MonoBehaviour
     {
         SetButtonTalk(false);
         dialoguePanel.SetActive(true);
-        FindObjectOfType<DialogueManager>().StartDialogue(dialogue, textName, textDialogue, gameobject);
+
+        isTalking = true;
+        FindObjectOfType<DialogueManager>().StartDialogue(dialogue, textName, textDialogue, gameObject);
     }
 
     public void ClearDialogue()
     {
         SetButtonTalk(true);
         dialoguePanel.SetActive(false);
+
+        isTalking = false;
     }
 
     private void SetButtonTalk(bool active)
