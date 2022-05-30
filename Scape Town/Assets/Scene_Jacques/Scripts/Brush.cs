@@ -11,6 +11,7 @@ public class Brush : MonoBehaviour
     private Renderer renderer;
     private Color[] colors;
     private float tipHeight;
+
     private RaycastHit touch;
     private Paintable paintable;
     private Vector2 touchPos, lastTouchPos;
@@ -42,9 +43,7 @@ public class Brush : MonoBehaviour
                 var x = (int)(touchPos.x * paintable.textureSize.x - (penSize/2));
                 var y = (int)(touchPos.y * paintable.textureSize.x - (penSize/2));
 
-                if(y < 0 || y > paintable.textureSize.y || x < 0 || x > paintable.textureSize.x) {
-                    return;
-                }
+                if(y < 0 || y > paintable.textureSize.y || x < 0 || x > paintable.textureSize.x) return;
 
                 if(touchedLastFrame) {
                     
@@ -55,6 +54,8 @@ public class Brush : MonoBehaviour
                         var lerpY = (int)Mathf.Lerp(lastTouchPos.y, y, f);
 
                         paintable.texture.SetPixels(lerpX, lerpY, penSize, penSize, colors);
+
+                        Debug.Log("TEST touchedlast");
                     }
 
                     transform.rotation = lastTouchRot;
