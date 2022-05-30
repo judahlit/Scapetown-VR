@@ -55,7 +55,6 @@ public class Brush : MonoBehaviour
 
                         paintable.texture.SetPixels(lerpX, lerpY, penSize, penSize, colors);
 
-                        Debug.Log("TEST touchedlast");
                     }
 
                     transform.rotation = lastTouchRot;
