@@ -11,9 +11,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/_VRShootingRange/Scenes/SampleScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
+  - enabled: 0
     path: Assets/_ScapeTown/Scenes/Scapetown View.unity
     guid: 12b8f3d75f6d6154fac09d51b96cf929
+  - enabled: 1
+    path: Assets/_ScapeTown/Scenes/ScapeTown.unity
+    guid: d066238300cb4ce46b6f7075cccf44f8
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: d7e21a674335d1b4fbf17dad937f01b8, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 7f3b5cbb85383584b9973c8709fa04b4, type: 2}
