@@ -7,6 +7,7 @@ TagManager:
   - KeyPadButton
   - Display
   - Hands
+  - Paintable
   layers:
   - Default
   - TransparentFX
