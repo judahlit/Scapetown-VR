@@ -10,19 +10,23 @@ public class DialogueTrigger : MonoBehaviour
     public Button buttonTalk;
     public GameObject player;
     public GameObject dialoguePanel;
-    public GameObject textName;
-    public GameObject textDialogue;
+    public Text textName;
+    public Text textDialogue;
     [SerializeField] private float talkDistance = 3f;
 
     private float distance;
     private bool buttonTalkIsActive;
     private bool isTalking;
 
+    private Queue<string> sentences;
+
     private void Start()
     {
         SetButtonTalk(false);
         dialoguePanel.SetActive(false);
         isTalking = false;
+
+        sentences = new Queue<string>();
     }
 
     private void Update()
@@ -54,8 +58,51 @@ public class DialogueTrigger : MonoBehaviour
         dialoguePanel.SetActive(true);
 
         isTalking = true;
-        FindObjectOfType<DialogueManager>().StartDialogue(dialogue, textName, textDialogue, gameObject);
+        //FindObjectOfType<DialogueManager>().StartDialogue(dialogue, textName, textDialogue, gameObject);
+        StartDialogue();
     }
+
+    public void StartDialogue()
+    {
+        textName.text = dialogue.name;
+        sentences.Clear();
+
+        foreach (string sentence in dialogue.sentences)
+        {
+            sentences.Enqueue(sentence);
+        }
+
+        DisplayNextSentence();
+    }
+    public void DisplayNextSentence()
+    {
+        if (sentences.Count == 0)
+        {
+            EndDialogue();
+            return;
+        }
+
+        string sentence = sentences.Dequeue();
+        StopAllCoroutines();
+        StartCoroutine(TypeSentence(sentence));
+    }
+
+    IEnumerator TypeSentence(string sentence)
+    {
+        textDialogue.text = "";
+
+        foreach (char letter in sentence.ToCharArray())
+        {
+            textDialogue.text += letter;
+            yield return null;
+        }
+    }
+
+    private void EndDialogue()
+    {
+        ClearDialogue();
+    }
+
 
     public void ClearDialogue()
     {
