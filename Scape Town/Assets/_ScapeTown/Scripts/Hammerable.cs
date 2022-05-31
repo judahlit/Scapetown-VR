@@ -13,6 +13,7 @@ public class Hammerable : MonoBehaviour
     void Start()
     {
         hitCount = 0;
+        hammer = GameObject.Find("Hammer");
     }
 
     // Update is called once per frame
