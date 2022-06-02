@@ -6,6 +6,7 @@ public class Hammerable : MonoBehaviour
 {
     [SerializeField] GameObject hammer;
     [SerializeField] GameObject hammerable;
+    [SerializeField] GameObject screwSpot;
     int hitCount;
     [SerializeField] int maxHits;
     [SerializeField] float moveDist;
@@ -23,18 +24,23 @@ public class Hammerable : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("triggered by: "+other.name);
+        //Debug.Log("triggered by: "+other.name);
         
         if (other.transform.parent.name == hammer.name)//hit by a child of the hammer
         {
-            Debug.Log("hammer hit");
+            //Debug.Log("hammer hit");
             if (hitCount < maxHits)
             {
                 hitCount++;
                 hammerable.transform.position += new Vector3(0, moveDist, 0);
-                Debug.Log("hit no: "+hitCount);
+                //Debug.Log("hit no: "+hitCount);
             }
-            
+            else
+            {
+                //Debug.Log("screw is in");
+                screwSpot.gameObject.SetActive(false);
+            }
+
         }
     }
 }
