@@ -8,6 +8,10 @@ public class ButtonPress : MonoBehaviour
 {
     [SerializeField] public KeyPadControl keyPad;
     [SerializeField] public Text display;
+    public AudioSource audio; 
+    public AudioClip codeCorrect;
+    public AudioClip codeFalse;
+    public AudioClip buttonPress;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,10 +32,12 @@ public class ButtonPress : MonoBehaviour
         if (other.tag == "KeyPadButton")
         {
             var key = other.GetComponentInChildren<Text>();
+            audio.clip = buttonPress;
+            audio.Play();
+
             if (key != null)
             {
-                var keyFeedback =
-other.gameObject.GetComponent<Buttons>();
+                var keyFeedback = other.gameObject.GetComponent<Buttons>();
 
                 if (key.text == "B")
                 {
@@ -51,10 +57,14 @@ other.gameObject.GetComponent<Buttons>();
                     if (accessGranted == true)
                     {
                         display.text = "Start";
+                        audio.clip = codeCorrect;
+                        audio.Play();
                     }
                     else
                     {
                         display.text = "Retry";
+                        audio.clip = codeFalse;
+                        audio.Play();
                     }
                 }
                 else if (key.text == "R")
@@ -71,6 +81,7 @@ other.gameObject.GetComponent<Buttons>();
                     if (display.text.Length < 4)
                     {
                         display.text += key.text;
+                        
                     }
                     keyFeedback.keyHit = true;
                 }
