@@ -22,6 +22,8 @@ TagManager:
   - Hands
   - Handles
   - GrabbableHandler
+  - Tool
+  - Player
   - 
   - 
   - Player
