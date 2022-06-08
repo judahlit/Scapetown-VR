@@ -1154,6 +1154,18 @@ MonoBehaviour:
       m_SingletonActionBindings: []
       m_Flags: 0
     m_Reference: {fileID: 6972639530819350904, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  _rightHandControls:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Right Hand Controls
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 27de3367-d528-4250-8d94-61bab468558d
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: -6493913391331992944, guid: c348712bda248c246b8c49b3db54643f, type: 3}
 --- !u!1 &945658934772695492
 GameObject:
   m_ObjectHideFlags: 0
