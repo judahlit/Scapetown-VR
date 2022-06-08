@@ -24,9 +24,8 @@ TagManager:
   - GrabbableHandler
   - 
   - 
-  - 
-  - 
-  - 
+  - Player
+  - InvisibleTeleportArea
   - 
   - 
   - 
