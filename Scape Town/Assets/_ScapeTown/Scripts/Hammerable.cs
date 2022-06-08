@@ -9,6 +9,11 @@ public class Hammerable : MonoBehaviour
     int hitCount;
     [SerializeField] int maxHits;
     [SerializeField] float moveDist;
+
+    [Header("Audio")]
+    [SerializeField] AudioSource audio;
+    [SerializeField] AudioClip firstHit;
+    [SerializeField] AudioClip lastHit;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +38,14 @@ public class Hammerable : MonoBehaviour
                 hitCount++;
                 hammerable.transform.position += new Vector3(0, moveDist, 0);
                 Debug.Log("hit no: "+hitCount);
+                if(hitCount <= 2){
+                    audio.clip = firstHit;
+                    audio.Play();
+                }
+                else {
+                    audio.clip = lastHit;
+                    audio.Play();
+                }
             }
             
         }
