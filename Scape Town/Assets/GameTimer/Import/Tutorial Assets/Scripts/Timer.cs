@@ -23,18 +23,23 @@ public class Timer : MonoBehaviour
 
     void Start()
     {
+        // Global var for color of font
         timerText.color = fontColor;
+        // Set default timer to 0
         timerDefault = 0;
+        // Apply basic time, minute and hour logic to update the timer default value.
         timerDefault += (seconds + (minutes * 60) + (hours * 60 * 60));
         currentSeconds = timerDefault;
     }
 
     void Update()
     {
+        // If time has ran out, execute the TimeUp method.
         if((currentSeconds -= Time.deltaTime) <= 0)
         {
             TimeUp();
         }
+        // Otherwise update the timer text with the correct value.
         else
         {
             if(showMilliseconds)
@@ -46,6 +51,9 @@ public class Timer : MonoBehaviour
 
     private void TimeUp()
     {
+        // Execute after time has run out.
+
+        Debug.Log("Time's up!");
         
         if (showMilliseconds)
             timerText.text = "00:00:00:000";
