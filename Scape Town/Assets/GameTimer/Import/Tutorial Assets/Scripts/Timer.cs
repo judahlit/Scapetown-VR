@@ -6,6 +6,9 @@ public class Timer : MonoBehaviour
 {
     public TextMeshProUGUI timerText;
 
+    private bool audioHasPlayed;
+    public AudioSource endOfTime;
+
     [Header("Time Values")]
     [Range(0,60)]
     public int seconds;
@@ -54,7 +57,16 @@ public class Timer : MonoBehaviour
         // Execute after time has run out.
 
         Debug.Log("Time's up!");
+
+        if (audioHasPlayed == false)
+        {
+            endOfTime.Play();
+            audioHasPlayed = true;
+        }
         
+
+        
+
         if (showMilliseconds)
             timerText.text = "00:00:00:000";
         else
