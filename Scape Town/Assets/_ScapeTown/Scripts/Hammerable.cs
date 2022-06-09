@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Hammerable : MonoBehaviour
 {
+    public delegate void Notify();
+    public event Notify LastHit;
+
+
     [SerializeField] GameObject hammer;
     [SerializeField] GameObject hammerable;
     [SerializeField] GameObject screwSpot;
@@ -39,11 +43,14 @@ public class Hammerable : MonoBehaviour
                 hitCount++;
                 hammerable.transform.position += new Vector3(0, moveDist, 0);
                 Debug.Log("hit no: "+hitCount);
-                if(hitCount <= 2){
+                if(hitCount < maxHits){
+                    // Consecutive hits
                     audio.clip = firstHit;
                     audio.Play();
                 }
                 else {
+                    // Last hit
+                    LastHit.Invoke();
                     audio.clip = lastHit;
                     audio.Play();
                 }

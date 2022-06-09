@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7910043480971717058
 RectTransform:
   m_ObjectHideFlags: 0
@@ -249,7 +249,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2016829687702175847
 RectTransform:
   m_ObjectHideFlags: 0
@@ -419,7 +419,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8868104387121228050
 RectTransform:
   m_ObjectHideFlags: 0
@@ -589,7 +589,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6815169496724851345
 RectTransform:
   m_ObjectHideFlags: 0
@@ -759,7 +759,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4777406411844142582
 RectTransform:
   m_ObjectHideFlags: 0
@@ -929,7 +929,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4079448330140703674
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1099,7 +1099,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1011825414890745873
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1269,7 +1269,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7527714788918532994
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1435,6 +1435,7 @@ GameObject:
   - component: {fileID: 8629752072021374583}
   - component: {fileID: 8629752072021374582}
   - component: {fileID: 8629752072021374581}
+  - component: {fileID: 3319463769640559094}
   m_Layer: 0
   m_Name: HammerHitSpot
   m_TagString: Untagged
@@ -1538,6 +1539,19 @@ MonoBehaviour:
   audio: {fileID: 0}
   firstHit: {fileID: 0}
   lastHit: {fileID: 0}
+--- !u!114 &3319463769640559094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8629752072021374579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73bebb92446f27847be05c186f88de4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _enableTarget: {fileID: 6579091482518155345}
 --- !u!1 &8629752072124215421
 GameObject:
   m_ObjectHideFlags: 0
@@ -1778,6 +1792,7 @@ GameObject:
   - component: {fileID: 8629752072309577435}
   - component: {fileID: 8629752072309577434}
   - component: {fileID: 8629752072309577433}
+  - component: {fileID: 4915810402464714667}
   m_Layer: 0
   m_Name: HammerHitSpot
   m_TagString: Untagged
@@ -1881,6 +1896,19 @@ MonoBehaviour:
   audio: {fileID: 0}
   firstHit: {fileID: 0}
   lastHit: {fileID: 0}
+--- !u!114 &4915810402464714667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8629752072309577431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73bebb92446f27847be05c186f88de4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _enableTarget: {fileID: 3508528093878363977}
 --- !u!1 &8629752072324201045
 GameObject:
   m_ObjectHideFlags: 0
@@ -2245,6 +2273,7 @@ GameObject:
   - component: {fileID: 8629752072361930623}
   - component: {fileID: 8629752072361930622}
   - component: {fileID: 8629752072361930621}
+  - component: {fileID: 5129037204640915317}
   m_Layer: 0
   m_Name: HammerHitSpot
   m_TagString: Untagged
@@ -2348,6 +2377,19 @@ MonoBehaviour:
   audio: {fileID: 0}
   firstHit: {fileID: 0}
   lastHit: {fileID: 0}
+--- !u!114 &5129037204640915317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8629752072361930619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73bebb92446f27847be05c186f88de4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _enableTarget: {fileID: 3887873921049484370}
 --- !u!1 &8629752072389428649
 GameObject:
   m_ObjectHideFlags: 0
@@ -2361,6 +2403,7 @@ GameObject:
   - component: {fileID: 8629752072389428653}
   - component: {fileID: 8629752072389428652}
   - component: {fileID: 8629752072389428651}
+  - component: {fileID: 468106839320588995}
   m_Layer: 0
   m_Name: HammerHitSpot
   m_TagString: Untagged
@@ -2464,6 +2507,19 @@ MonoBehaviour:
   audio: {fileID: 0}
   firstHit: {fileID: 0}
   lastHit: {fileID: 0}
+--- !u!114 &468106839320588995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8629752072389428649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73bebb92446f27847be05c186f88de4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _enableTarget: {fileID: 59991572901437518}
 --- !u!1 &8629752072414420855
 GameObject:
   m_ObjectHideFlags: 0
@@ -3733,6 +3789,7 @@ GameObject:
   - component: {fileID: 8629752073254498665}
   - component: {fileID: 8629752073254498664}
   - component: {fileID: 8629752073254498663}
+  - component: {fileID: 3047583835662219962}
   m_Layer: 0
   m_Name: HammerHitSpot
   m_TagString: Untagged
@@ -3836,6 +3893,19 @@ MonoBehaviour:
   audio: {fileID: 0}
   firstHit: {fileID: 0}
   lastHit: {fileID: 0}
+--- !u!114 &3047583835662219962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8629752073254498661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73bebb92446f27847be05c186f88de4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _enableTarget: {fileID: 8508553413712453436}
 --- !u!1 &8629752073527498453
 GameObject:
   m_ObjectHideFlags: 0
@@ -4326,6 +4396,7 @@ GameObject:
   - component: {fileID: 8629752073652669763}
   - component: {fileID: 8629752073652669762}
   - component: {fileID: 8629752073652669761}
+  - component: {fileID: 3528046345681948492}
   m_Layer: 0
   m_Name: HammerHitSpot
   m_TagString: Untagged
@@ -4429,6 +4500,19 @@ MonoBehaviour:
   audio: {fileID: 0}
   firstHit: {fileID: 0}
   lastHit: {fileID: 0}
+--- !u!114 &3528046345681948492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8629752073652669823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73bebb92446f27847be05c186f88de4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _enableTarget: {fileID: 6228657109702065418}
 --- !u!1 &8629752073658936826
 GameObject:
   m_ObjectHideFlags: 0
@@ -4442,6 +4526,7 @@ GameObject:
   - component: {fileID: 8629752073658936830}
   - component: {fileID: 8629752073658936829}
   - component: {fileID: 8629752073658936828}
+  - component: {fileID: 3732923792552340979}
   m_Layer: 0
   m_Name: HammerHitSpot
   m_TagString: Untagged
@@ -4545,6 +4630,19 @@ MonoBehaviour:
   audio: {fileID: 0}
   firstHit: {fileID: 0}
   lastHit: {fileID: 0}
+--- !u!114 &3732923792552340979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8629752073658936826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73bebb92446f27847be05c186f88de4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _enableTarget: {fileID: 6077868818951029033}
 --- !u!1 &8629752073660184670
 GameObject:
   m_ObjectHideFlags: 0
@@ -4749,6 +4847,7 @@ GameObject:
   - component: {fileID: 8629752073791017331}
   - component: {fileID: 8629752073791017330}
   - component: {fileID: 8629752073791017329}
+  - component: {fileID: 1921240963301867238}
   m_Layer: 0
   m_Name: HammerHitSpot
   m_TagString: Untagged
@@ -4852,6 +4951,19 @@ MonoBehaviour:
   audio: {fileID: 0}
   firstHit: {fileID: 0}
   lastHit: {fileID: 0}
+--- !u!114 &1921240963301867238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8629752073791017327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73bebb92446f27847be05c186f88de4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _enableTarget: {fileID: 6525766251961253764}
 --- !u!1 &8629752073847531845
 GameObject:
   m_ObjectHideFlags: 0
