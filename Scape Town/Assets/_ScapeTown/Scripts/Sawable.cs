@@ -13,6 +13,12 @@ public class Sawable : MonoBehaviour
     [SerializeField] GameObject uselessHalf;
     [SerializeField] GameObject puzzleHalf;
 
+    [Header("Audio")]
+
+    [SerializeField] AudioSource audio;
+    [SerializeField] AudioClip sawFirst;
+    [SerializeField] AudioClip sawLast;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,6 +43,14 @@ public class Sawable : MonoBehaviour
                 sawCount++;
                 this.transform.position += moveSpot;
                 //Debug.Log("saw cut no: " + sawCount);
+                if(sawCount % 2 == 0) {
+                    audio.clip = sawFirst;
+                    audio.Play();
+                }
+                else {
+                    audio.clip = sawLast;
+                    audio.Play();
+                }
             }
             else
             {
