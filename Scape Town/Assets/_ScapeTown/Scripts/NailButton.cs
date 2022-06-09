@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class PhysicsButton1 : MonoBehaviour
+public class NailButton : MonoBehaviour
 {
     // Serialized floats that store the threshold that has to be met to identify a button press. And the deadzone that ignores accidental input.
     [SerializeField] private float threshold = 0.1f;
@@ -19,9 +19,9 @@ public class PhysicsButton1 : MonoBehaviour
     public GameObject house3;
     
     */
-    public GameObject textToShow;
+    //public GameObject textToShow;
     // The material that the skybox changes to when the player presses the button.
-    public Material skyboxMat;
+    //public Material skyboxMat;
 
     // Variables to store whether or not the butten is pressed, what the start position is of the button as a vector and
     // the configurable joint used to make the button physics work.
