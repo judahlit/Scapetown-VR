@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1177695692519832874}
   - component: {fileID: 1177695692519832872}
   - component: {fileID: 1177695692519832875}
+  - component: {fileID: 8813107302935650745}
   m_Layer: 13
   m_Name: Nail
   m_TagString: Untagged
@@ -88,10 +89,34 @@ MonoBehaviour:
       m_Calls: []
   m_FirstSelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8813107302935650745}
+        m_TargetAssemblyTypeName: ItemSounds, Assembly-CSharp
+        m_MethodName: Testing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_LastSelectExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8813107302935650745}
+        m_TargetAssemblyTypeName: ItemSounds, Assembly-CSharp
+        m_MethodName: TestingAlt
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -168,6 +193,21 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
+--- !u!114 &8813107302935650745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1177695692519832877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87a458bfc2692a047b427838d3cafd34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audio: {fileID: 0}
+  itemGrab: {fileID: 8300000, guid: 90e51a275d0a24d4e9dc148a98a04c2f, type: 3}
+  itemDrop: {fileID: 8300000, guid: 74e8d3949965ff64699870e02b9f0e9f, type: 3}
 --- !u!1 &1177695692994758938
 GameObject:
   m_ObjectHideFlags: 0
