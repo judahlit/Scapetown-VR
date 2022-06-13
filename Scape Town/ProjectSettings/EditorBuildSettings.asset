@@ -14,12 +14,15 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/_ScapeTown/Scenes/Scapetown View.unity
     guid: 12b8f3d75f6d6154fac09d51b96cf929
-  - enabled: 1
-    path: Assets/_ScapeTown/Scenes/ScapeTown.unity
-    guid: d066238300cb4ce46b6f7075cccf44f8
   - enabled: 0
     path: Assets/_ScapeTown/Scenes/Krystian's Prototype.unity
     guid: b9f378fbbb3d6d044a916dcc3d4c5265
+  - enabled: 1
+    path: Assets/_ScapeTown/Scenes/ScapeTown.unity
+    guid: d066238300cb4ce46b6f7075cccf44f8
+  - enabled: 1
+    path: Assets/_ScapeTown/Scenes/EndScreen.unity
+    guid: ad174cac846500b45907902a242fc9f4
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: d7e21a674335d1b4fbf17dad937f01b8, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 7f3b5cbb85383584b9973c8709fa04b4, type: 2}
