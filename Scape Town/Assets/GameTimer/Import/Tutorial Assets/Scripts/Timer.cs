@@ -1,10 +1,14 @@
 ﻿using UnityEngine;
 using TMPro;
 using System;
+using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
     public TextMeshProUGUI timerText;
+
+    public string sceneToLoad;
 
     private bool audioHasPlayed;
     public AudioSource endOfTime;
@@ -18,6 +22,8 @@ public class Timer : MonoBehaviour
     public int hours;
 
     public Color fontColor;
+
+    private IEnumerator coroutine;
 
     public bool showMilliseconds;
 
@@ -33,6 +39,8 @@ public class Timer : MonoBehaviour
         // Apply basic time, minute and hour logic to update the timer default value.
         timerDefault += (seconds + (minutes * 60) + (hours * 60 * 60));
         currentSeconds = timerDefault;
+
+
     }
 
     void Update()
@@ -58,18 +66,27 @@ public class Timer : MonoBehaviour
 
         Debug.Log("Time's up!");
 
+        coroutine = WaitAndPrint(4.0f);
+
+        
+
         if (audioHasPlayed == false)
         {
             endOfTime.Play();
+            StartCoroutine(coroutine);
             audioHasPlayed = true;
         }
-        
-
-        
-
+           
         if (showMilliseconds)
             timerText.text = "00:00:00:000";
         else
             timerText.text = "00:00:00";
+    }
+
+    private IEnumerator WaitAndPrint(float waitTime)
+    {
+            yield return new WaitForSeconds(waitTime);
+            
+            SceneManager.LoadScene(sceneToLoad);
     }
 }
