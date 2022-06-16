@@ -1367,7 +1367,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hammer: {fileID: 0}
   hammerable: {fileID: 6447731842368123149}
-  screwSpot: {fileID: 8629752073097202280}
+  screwSpot: {fileID: 8629752073847531845}
   maxHits: 5
   moveDist: -0.011
   audio: {fileID: 0}
@@ -2210,7 +2210,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hammer: {fileID: 0}
   hammerable: {fileID: 8161084807739937226}
-  screwSpot: {fileID: 8629752072602890562}
+  screwSpot: {fileID: 270192389481357325}
   maxHits: 5
   moveDist: -0.011
   audio: {fileID: 0}
