@@ -5,8 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class MenuController : MonoBehaviour
 {
-   public void StartBtn ()
-   {
-       SceneManager.LoadScene("ScapeTown");
-   }
+    [SerializeField] private Transform _player;
+    [SerializeField] private Vector3 _targetPosition;
+
+    public void StartBtn ()
+    {
+        //SceneManager.LoadScene("ScapeTown");
+        _player.position = _targetPosition;
+    }
 }
