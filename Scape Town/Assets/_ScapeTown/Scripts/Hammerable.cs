@@ -53,12 +53,12 @@ public class Hammerable : MonoBehaviour
                     LastHit.Invoke();
                     audio.clip = lastHit;
                     audio.Play();
+                    screwSpot.gameObject.SetActive(false);
                 }
             }
             else
             {
                 //Debug.Log("screw is in");
-                screwSpot.gameObject.SetActive(false);
             }
 
         }
